@@ -22,7 +22,7 @@ const route = useRoute();
         to="/stats"
         class="hover:dark:bg-mocha-overlay0/25 hover:bg-latte-overlay0/25 border-rounded-xl p-3"
         :class="{
-          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path === '/stats',
+          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path.includes('/stats'),
         }"
       >
         <div class="i-fluent:chart-multiple-24-regular text-xl"></div>
@@ -33,7 +33,7 @@ const route = useRoute();
         to="/users"
         class="hover:dark:bg-mocha-overlay0/25 hover:bg-latte-overlay0/25 border-rounded-xl p-3"
         :class="{
-          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path === '/users',
+          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path.includes('/users'),
         }"
       >
         <div class="i-fluent:person-32-regular text-xl"></div>
@@ -44,7 +44,7 @@ const route = useRoute();
         to="/singers"
         class="hover:dark:bg-mocha-overlay0/25 hover:bg-latte-overlay0/25 border-rounded-xl p-3"
         :class="{
-          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path === '/singers',
+          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path.includes('/singers'),
         }"
       >
         <div class="i-fluent:mic-32-regular text-xl"></div>
@@ -55,7 +55,7 @@ const route = useRoute();
         to="/songs"
         class="hover:dark:bg-mocha-overlay0/25 hover:bg-latte-overlay0/25 border-rounded-xl p-3"
         :class="{
-          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path === '/songs',
+          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path.includes('/songs'),
         }"
       >
         <div class="i-fluent:music-note-2-24-regular text-xl"></div>
@@ -66,7 +66,7 @@ const route = useRoute();
         to="/settings"
         class="hover:dark:bg-mocha-overlay0/25 hover:bg-latte-overlay0/25 border-rounded-xl p-3"
         :class="{
-          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path === '/settings',
+          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path.includes('/settings'),
         }"
       >
         <div class="i-fluent:settings-32-regular text-xl"></div>

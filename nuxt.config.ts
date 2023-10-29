@@ -27,6 +27,7 @@ export default defineNuxtConfig({
 
   components: [
     '~/Components',
+    { path: '~/Components/Forms' },
   ],
 
   css: [
@@ -40,7 +41,7 @@ export default defineNuxtConfig({
       ripple: true,
       inputStyle: 'filled',
     },
-    importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
+    importPT: undefined,
     components: {
       prefix: 'Prime',
       include: '*',
