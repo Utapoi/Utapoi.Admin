@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
       ripple: true,
       inputStyle: 'filled',
     },
-    importPT: undefined,
+    importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
     components: {
       prefix: 'Prime',
       include: '*',
