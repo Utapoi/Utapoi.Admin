@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { nanoid } from 'nanoid'
 import { required } from '@vuelidate/validators'
 import useVuelidate from '@vuelidate/core'
@@ -188,7 +187,7 @@ async function OnSubmit() {
 
 <template>
   <div class="mx-auto h-full max-w-6xl px-12 container">
-    <div class="flex flex-col mb-8">
+    <div class="mb-8 flex flex-col">
       <div class="flex items-center gap-4">
         <div class="h-0.75 w-14 rounded-full bg-mocha-surface2 dark:bg-latte-surface2" />
 
@@ -479,7 +478,7 @@ async function OnSubmit() {
       <div class="mt-4 w-full inline-flex justify-between">
         <NuxtLink
           to="/singers"
-          class="rounded-full h-min px-4 py-2 font-semibold uppercase text-latte-text dark:text-mocha-text ring-2 hover:ring-0 ring-latte-green dark:ring-mocha-green cursor-pointer transition-all duration-150 hover:bg-latte-green hover:dark:bg-mocha-green hover:text-latte-base hover:dark:text-mocha-base"
+          class="h-min cursor-pointer rounded-full px-4 py-2 font-semibold uppercase text-latte-text ring-2 ring-latte-green transition-all duration-150 hover:bg-latte-green dark:text-mocha-text hover:text-latte-base hover:ring-0 dark:ring-mocha-green hover:dark:bg-mocha-green hover:dark:text-mocha-base"
         >
           Back
         </NuxtLink>
