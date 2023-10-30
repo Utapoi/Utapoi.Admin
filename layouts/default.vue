@@ -38,6 +38,17 @@ const route = useRoute()
         <div class="i-fluent:mic-32-regular text-xl" />
       </NuxtLink>
 
+      <!-- Albums -->
+      <NuxtLink
+        to="/albums"
+        class="border-rounded-xl p-3 hover:bg-latte-overlay0/25 hover:dark:bg-mocha-overlay0/25"
+        :class="{
+          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path.includes('/albums'),
+        }"
+      >
+        <div class="i-solar:album-linear text-xl" />
+      </NuxtLink>
+
       <!-- Songs -->
       <NuxtLink
         to="/songs"
@@ -46,7 +57,7 @@ const route = useRoute()
           'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path.includes('/songs'),
         }"
       >
-        <div class="i-fluent:music-note-2-24-regular text-xl" />
+        <div class="i-solar:music-library-2-outline text-xl" />
       </NuxtLink>
 
       <!-- Settings -->
@@ -58,6 +69,17 @@ const route = useRoute()
         }"
       >
         <div class="i-fluent:settings-32-regular text-xl" />
+      </NuxtLink>
+
+      <!-- Stats - Redirect to metrics.utapoi.com -->
+      <NuxtLink
+        to="/stats"
+        class="border-rounded-xl p-3 hover:bg-latte-overlay0/25 hover:dark:bg-mocha-overlay0/25"
+        :class="{
+          'bg-latte-overlay0/25 dark:bg-mocha-overlay0/25': route.path.includes('/stats'),
+        }"
+      >
+        <div class="i-solar:chart-2-line-duotone text-xl" />
       </NuxtLink>
     </div>
     <div class="h-full w-full py-5 pr-5">

@@ -16,7 +16,9 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
     "@catppuccin/palette": "^0.2.0",
+    "@iconify-json/carbon": "^1.1.21",
     "@iconify-json/fluent": "^1.1.39",
+    "@iconify-json/solar": "^1.1.5",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
     "@pinia/nuxt": "^0.5.1",

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
-    'nuxt-primevue'
+    'nuxt-primevue',
   ],
 
   colorMode: {
@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     fallback: 'dark',
     classSuffix: '',
   },
-
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
@@ -35,7 +34,7 @@ export default defineNuxtConfig({
   ],
 
   primevue: {
-    usePrimeVue:  true,
+    usePrimeVue: true,
     options: {
       unstyled: true,
       ripple: true,
@@ -45,7 +44,10 @@ export default defineNuxtConfig({
     components: {
       prefix: 'Prime',
       include: '*',
-      exclude: ['Galleria', 'Carousel']
+      exclude: ['Galleria', 'Carousel'],
+    },
+    composables: {
+      include: ['useConfirm', 'useToast'],
     },
     directives: {
       include: ['Tooltip'],

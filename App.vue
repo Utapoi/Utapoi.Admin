@@ -8,6 +8,13 @@ useHead({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <ConfirmPopup />
+  <Toast
+    position="top-right"
+    :life="5000"
+    success-icon="i-fluent:checkmark-circle-32-regular"
+    error-icon="i-fluent:dismiss-circle-32-regular"
+  />
 </template>
 
 <style>

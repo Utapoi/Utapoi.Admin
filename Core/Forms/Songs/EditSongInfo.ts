@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid'
 import type { ILocalizedString } from '~/Core/Models/LocalizedString'
 import type { ISong } from '~/Core/Models/Song'
 
@@ -9,13 +8,10 @@ export interface IEditSongInfo {
   Albums: string[]
   Tags: string[]
   ThumbnailFile: File | null
-  PreviewFile: File | null
-  VoiceFile: File | null
-  InstrumentalFile: File | null
-  Lyrics: ILocalizedString[]
+  SongFile: File | null
 }
 
-export function EmptyIEditSingerInfo(): IEditSongInfo {
+export function EmptyIEditSongInfo(): IEditSongInfo {
   return {
     Id: '',
     Titles: [],
@@ -23,10 +19,7 @@ export function EmptyIEditSingerInfo(): IEditSongInfo {
     Albums: [],
     Tags: [],
     ThumbnailFile: null,
-    PreviewFile: null,
-    VoiceFile: null,
-    InstrumentalFile: null,
-    Lyrics: [],
+    SongFile: null,
   }
 }
 
@@ -38,13 +31,6 @@ export function IEditSongInfoFromSong(song: ISong): IEditSongInfo {
     Albums: song.Albums?.map(album => album.Id),
     Tags: song.Tags?.map(tag => tag.Name),
     ThumbnailFile: null,
-    PreviewFile: null,
-    VoiceFile: null,
-    InstrumentalFile: null,
-    Lyrics: song.Lyrics ?? [{
-      Id: nanoid(),
-      Text: '',
-      Language: 'Japanese',
-    }],
+    SongFile: null,
   }
 }

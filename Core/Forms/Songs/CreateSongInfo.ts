@@ -8,9 +8,5 @@ export interface CreateSongInfo {
   Albums: string[]
   Tags: string[]
   ThumbnailFile: CreateFileInfo
-  PreviewFile: CreateFileInfo
-  VoiceFile: CreateFileInfo
-  InstrumentalFile: CreateFileInfo
-  Lyrics: ILocalizedString[]
-  KaraokeFiles: CreateFileInfo[]
+  SongFile: CreateFileInfo
 }

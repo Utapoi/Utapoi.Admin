@@ -11,9 +11,15 @@ devDependencies:
   '@catppuccin/palette':
     specifier: ^0.2.0
     version: 0.2.0
+  '@iconify-json/carbon':
+    specifier: ^1.1.21
+    version: 1.1.21
   '@iconify-json/fluent':
     specifier: ^1.1.39
     version: 1.1.39
+  '@iconify-json/solar':
+    specifier: ^1.1.5
+    version: 1.1.5
   '@nuxt/devtools':
     specifier: latest
     version: 1.0.0(nuxt@3.8.0)(vite@4.5.0)
@@ -991,8 +997,20 @@ packages:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
 
+  /@iconify-json/carbon@1.1.21:
+    resolution: {integrity: sha512-bK2cMVM4noBU+FGlay433flpXLRzQu0ED095iAnoO6ka3yb4uz0lvb8acpN5gthyGLJ89C4HpfIbQZLQnMKQww==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/fluent@1.1.39:
     resolution: {integrity: sha512-fGpstFAoAzyXMKlbNIJADr+MAZOZL8edlmzlfD/tT2cMW8xxPN2pEO8lc87n8c3tNV0fWuiW+nleVN79sZ490Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/solar@1.1.5:
+    resolution: {integrity: sha512-IeYbRYu0Y3GFXspGwUT876ok1n3Hkqw/CViP+zaDrGp+uLphjddLlL9hu8vkp5UOq+WnNWb5EG1vM1yro79Fzg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
