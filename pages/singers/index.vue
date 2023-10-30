@@ -6,8 +6,22 @@ const SingersService = useSingersService()
 
 // Refs
 const Singers = ref<Singer[]>([])
+const SearchQuery = ref<string>('')
 
 Singers.value = await SingersService.GetSingersForAdminAsync(0, 15)
+
+// Debounced methods
+const DebouncedSearchSingers = useDebounceFn(SearchSingersInternal, 500, {
+  maxWait: 750,
+})
+
+// Methods
+async function SearchSingersInternal() {
+  if (SearchQuery.value.length < 2)
+    return
+
+  Singers.value = await SingersService.SearchAsync(SearchQuery.value)
+}
 </script>
 
 <template>
@@ -20,8 +34,13 @@ Singers.value = await SingersService.GetSingersForAdminAsync(0, 15)
 
           <div class="border border-latte-overlay0 rounded-full dark:border-mocha-overlay0">
             <div class="w-64 inline-flex items-center justify-between gap-6 px-4 py-1.5 text-latte-subtext1 dark:text-mocha-subtext1">
-              <span>Search an artist...</span>
-              <span class="i-fluent:search-20-filled text-lg" />
+              <PrimeInputText
+                v-model="SearchQuery"
+                placeholder="Search for artists"
+                class="w-full border-none bg-transparent focus:outline-none"
+                @change="DebouncedSearchSingers"
+              />
+              <span class="i-fluent:search-20-filled cursor-pointer text-lg" @click.prevent="DebouncedSearchSingers" />
             </div>
           </div>
           <div
