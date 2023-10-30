@@ -11,7 +11,7 @@ Singers.value = await SingersService.GetSingersForAdminAsync(0, 15)
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 mx-auto max-w-10xl w-full w-full">
+  <div class="mx-auto max-w-10xl w-full w-full flex flex-col gap-2">
     <div class="w-full">
       <div class="w-full rounded-xl bg-latte-surface0 p-3 shadow dark:bg-mocha-surface0">
         <div class="flex items-center gap-2">
@@ -49,21 +49,21 @@ Singers.value = await SingersService.GetSingersForAdminAsync(0, 15)
         </div>
       </div>
     </div>
-    <div class="bg-latte-surface0 dark:bg-mocha-surface0 p-5 border-rounded-xl">
+    <div class="border-rounded-xl bg-latte-surface0 p-5 dark:bg-mocha-surface0">
       <PrimeDataTable
-      v-if="Singers.length > 0"
+        v-if="Singers.length > 0"
         :value="Singers"
       >
-      <template #loading>
-        <div class="text-center text-latte-text dark:text-mocha-text">
-          Loading singers...
-        </div>
-      </template>
-      <PrimeColumn header="Name" field="Name">
-        <template #body="{ data }">
-          {{ (data as Singer).GetName() }}
+        <template #loading>
+          <div class="text-center text-latte-text dark:text-mocha-text">
+            Loading singers...
+          </div>
         </template>
-      </PrimeColumn>
+        <PrimeColumn header="Name" field="Name">
+          <template #body="{ data }">
+            {{ (data as Singer).GetName() }}
+          </template>
+        </PrimeColumn>
       </PrimeDataTable>
     </div>
   </div>
