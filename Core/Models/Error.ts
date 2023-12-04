@@ -25,6 +25,16 @@ export class ApiError {
     return new ApiError(json)
   }
 
+  static UnknowError(): ApiError {
+    return new ApiError({
+      type: 'UnknowError',
+      title: 'UnknowError',
+      status: 0,
+      traceId: '',
+      errors: {},
+    })
+  }
+
   GetErrors(): Array<string> {
     let errors: string[] = []
 

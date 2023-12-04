@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-primevue',
   ],
+  devServer: {
+    port: 3002,
+  },
 
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
@@ -96,6 +99,7 @@ export default defineNuxtConfig({
     public: {
       DOMAIN: 'localhost',
       API_URL: 'https://localhost:7215', // 'http://localhost:5215',
+      MQ_API_URL: 'https://localhost:7027',
     },
   },
 })
